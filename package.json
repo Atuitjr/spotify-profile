@@ -2,7 +2,7 @@
 	"name": "spotify-profile",
 	"version": "0.1.0",
 	"description": "Spotify Profile",
-	"main": "index.js",
+	"main": "index.tsx",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Atuitjr/spotify-profile.git"
@@ -20,9 +20,9 @@
 	"scripts": {
 		"client:install": "cd client && npm install",
 		"client": "cd client && npm run start",
-		"server": "node server",
+		"server": "tsc && node dist/index.js",
 		"dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-		"start": "node server"
+		"start": "tsc && node dist/index.js"
 	},
 	"lint-staged": {
 		"*.{js,css,json,md}": [
@@ -58,6 +58,7 @@
 		"eslint-plugin-react": "^7.14.3",
 		"husky": "^4.2.3",
 		"lint-staged": "^10.1.1",
-		"prettier": "^2.0.2"
+		"prettier": "^2.0.2",
+		"typescript": "^3.3.3"
 	}
 }
