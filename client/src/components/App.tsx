@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LoginScreen from "./LoginScreen";
+import Profile from "./Profile";
 import { token } from "../spotify/spotify";
 
 import styled from "styled-components/macro";
@@ -22,9 +23,7 @@ class App extends Component {
 		const { token } = this.state;
 
 		return (
-			<AppContainer>
-				{token ? <h1>hello</h1> : <LoginScreen />}
-			</AppContainer>
+			<AppContainer>{token ? <Profile /> : <LoginScreen />}</AppContainer>
 		);
 	}
 }
