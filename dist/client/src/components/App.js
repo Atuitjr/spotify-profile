@@ -46,6 +46,7 @@ var __importDefault =
 	};
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
+const LoginScreen_1 = __importDefault(require("./LoginScreen"));
 const macro_1 = __importDefault(require("styled-components/macro"));
 const AppContainer = macro_1.default.div`
 	height: 100%;
@@ -61,7 +62,13 @@ class App extends react_1.Component {
 	componentDidMount() {}
 	render() {
 		const { token } = this.state;
-		return react_1.default.createElement(AppContainer, null);
+		return react_1.default.createElement(
+			AppContainer,
+			null,
+			token
+				? null
+				: react_1.default.createElement(LoginScreen_1.default, null)
+		);
 	}
 }
 exports.default = App;

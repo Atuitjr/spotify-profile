@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LoginScreen from "./LoginScreen";
 
 import styled from "styled-components/macro";
 
@@ -17,7 +18,7 @@ class App extends Component {
 	render() {
 		const { token } = this.state;
 
-		return <AppContainer></AppContainer>;
+		return <AppContainer>{token ? null : <LoginScreen />}</AppContainer>;
 	}
 }
 
