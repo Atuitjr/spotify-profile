@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LoginScreen from "./LoginScreen";
+import { token } from "../spotify/spotify";
 
 import styled from "styled-components/macro";
 
@@ -13,12 +14,18 @@ class App extends Component {
 		token: "",
 	};
 
-	componentDidMount() {}
+	componentDidMount() {
+		this.setState({ token });
+	}
 
 	render() {
 		const { token } = this.state;
 
-		return <AppContainer>{token ? null : <LoginScreen />}</AppContainer>;
+		return (
+			<AppContainer>
+				{token ? <h1>hello</h1> : <LoginScreen />}
+			</AppContainer>
+		);
 	}
 }
 
