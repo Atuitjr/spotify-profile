@@ -4,6 +4,7 @@ import { Router } from "@reach/router";
 import styled from "styled-components/macro";
 import theme from "../styles/theme";
 import media from "../styles/media";
+import Nav from "./Nav";
 
 const SiteWrapper = styled.div`
 	padding-left: ${theme.navWidth};
@@ -15,7 +16,7 @@ const SiteWrapper = styled.div`
 
 const Profile = () => (
 	<SiteWrapper>
-		<h1>hello</h1>
+		<Nav />
 		<Router primary={false}></Router>
 	</SiteWrapper>
 );

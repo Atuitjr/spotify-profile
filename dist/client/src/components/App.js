@@ -47,6 +47,8 @@ var __importDefault =
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 const LoginScreen_1 = __importDefault(require("./LoginScreen"));
+const Profile_1 = __importDefault(require("./Profile"));
+const spotify_1 = require("../spotify/spotify");
 const macro_1 = __importDefault(require("styled-components/macro"));
 const AppContainer = macro_1.default.div`
 	height: 100%;
@@ -59,14 +61,16 @@ class App extends react_1.Component {
 			token: "",
 		};
 	}
-	componentDidMount() {}
+	componentDidMount() {
+		this.setState({ token: spotify_1.token });
+	}
 	render() {
 		const { token } = this.state;
 		return react_1.default.createElement(
 			AppContainer,
 			null,
 			token
-				? null
+				? react_1.default.createElement(Profile_1.default, null)
 				: react_1.default.createElement(LoginScreen_1.default, null)
 		);
 	}
