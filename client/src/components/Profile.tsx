@@ -6,6 +6,7 @@ import theme from "../styles/theme";
 import media from "../styles/media";
 import Nav from "./Nav";
 import User from "./User";
+import RecentlyPlayed from "./RecentlyPlayed";
 
 const SiteWrapper = styled.div`
 	padding-left: ${theme.navWidth};
@@ -20,6 +21,7 @@ const Profile = () => (
 		<Nav />
 		<Router primary={false}>
 			<User path="/" />
+			<RecentlyPlayed path="recent" />
 		</Router>
 	</SiteWrapper>
 );
