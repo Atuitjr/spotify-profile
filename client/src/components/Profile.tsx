@@ -5,6 +5,7 @@ import styled from "styled-components/macro";
 import theme from "../styles/theme";
 import media from "../styles/media";
 import Nav from "./Nav";
+import User from "./User";
 
 const SiteWrapper = styled.div`
 	padding-left: ${theme.navWidth};
@@ -17,7 +18,9 @@ const SiteWrapper = styled.div`
 const Profile = () => (
 	<SiteWrapper>
 		<Nav />
-		<Router primary={false}></Router>
+		<Router primary={false}>
+			<User path="/" />
+		</Router>
 	</SiteWrapper>
 );
 

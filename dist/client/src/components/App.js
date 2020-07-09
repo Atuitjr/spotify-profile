@@ -47,6 +47,7 @@ var __importDefault =
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 const LoginScreen_1 = __importDefault(require("./LoginScreen"));
+const GlobalStyle_1 = __importDefault(require("../styles/GlobalStyle"));
 const Profile_1 = __importDefault(require("./Profile"));
 const spotify_1 = require("../spotify/spotify");
 const macro_1 = __importDefault(require("styled-components/macro"));
@@ -69,6 +70,7 @@ class App extends react_1.Component {
 		return react_1.default.createElement(
 			AppContainer,
 			null,
+			react_1.default.createElement(GlobalStyle_1.default, null),
 			token
 				? react_1.default.createElement(Profile_1.default, null)
 				: react_1.default.createElement(LoginScreen_1.default, null)

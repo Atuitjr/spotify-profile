@@ -1,25 +1,23 @@
 "use strict";
-var __importDefault =
-	(this && this.__importDefault) ||
-	function (mod) {
-		return mod && mod.__esModule ? mod : { default: mod };
-	};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const macro_1 = require("styled-components/macro");
 const theme_1 = __importDefault(require("./theme"));
 const { colors, fontSizes } = theme_1.default;
 const mixins = {
-	flexCenter: macro_1.css`
+    flexCenter: macro_1.css `
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	`,
-	flexBetween: macro_1.css`
+    flexBetween: macro_1.css `
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	`,
-	engulf: macro_1.css`
+    engulf: macro_1.css `
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -28,19 +26,19 @@ const mixins = {
 		width: 100%;
 		height: 100%;
 	`,
-	outline: macro_1.css`
+    outline: macro_1.css `
 		outline: 1px solid red;
 	`,
-	overflowEllipsis: macro_1.css`
+    overflowEllipsis: macro_1.css `
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		padding-right: 1px;
 	`,
-	coverShadow: macro_1.css`
+    coverShadow: macro_1.css `
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 	`,
-	button: macro_1.css`
+    button: macro_1.css `
 		display: inline-block;
 		color: ${colors.white};
 		font-weight: 700;
@@ -60,7 +58,7 @@ const mixins = {
 			outline: 0;
 		}
 	`,
-	greenButton: macro_1.css`
+    greenButton: macro_1.css `
 		display: inline-block;
 		background-color: ${colors.green};
 		color: ${colors.white};
