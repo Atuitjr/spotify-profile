@@ -5,6 +5,7 @@
 
 # distribution
 /dist
+dist
 
 # testing
 /coverage
