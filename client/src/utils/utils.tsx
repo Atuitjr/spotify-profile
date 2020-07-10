@@ -74,6 +74,9 @@ export const formatDurationForHumans = (millis: number) => {
 	return `${minutes} Mins ${seconds} Secs`;
 };
 
+export const formatWithCommas = (n: any) =>
+	n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 // Higher-order function for async/await error handling
 export const catchErrors = (fn: any) => {
 	return function (...args: any[]) {
