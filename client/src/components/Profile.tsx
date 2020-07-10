@@ -10,6 +10,7 @@ import RecentlyPlayed from "./RecentlyPlayed";
 import TopArtists from "./TopArtists";
 import TopTracks from "./TopTracks";
 import Playlists from "./Playlists";
+import Playlist from "./Playlist";
 
 const SiteWrapper = styled.div`
 	padding-left: ${theme.navWidth};
@@ -28,6 +29,7 @@ const Profile = () => (
 			<TopArtists path="artists" />
 			<TopTracks path="tracks" />
 			<Playlists path="playlists" />
+			<Playlist path="playlists/:playlistId" />
 		</Router>
 	</SiteWrapper>
 );
